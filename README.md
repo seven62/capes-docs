@@ -13,7 +13,7 @@ Please see below for Build, Operate, Maintain specifics on the different web app
 * [Portainer](portainer/build_operate_maintain.md)  
 
 ## Requirements
-While the OS version isn't a hard requirement, all testing and development work has been done with `CentOS 7.6.1810 (Core)`.
+While the OS version isn't a hard requirement, all testing and development work has been done with `CentOS 7.7.1908`.
 
 ## Secure by Design
 
@@ -41,7 +41,7 @@ Generally, the CAPES ecosystem is meant to run as a whole, so the preferred usag
 
 ### Build your OS (CentOS 7.6)
 This is meant to help those who need a step-by-step build of CentOS, securing SSh, and getting ready to grab CAPES. If you don't need this guide, skip on down to [Get CAPES](#get-capes).
-1. Download the latest version of [CentOS Minimal](http://isoredirect.centos.org/centos/7/isos/x86_64/CentOS-7-x86_64-Minimal-1810.iso)
+1. Download the latest version of [CentOS Minimal](http://isoredirect.centos.org/centos/7/isos/x86_64/)
 1. Build a VM or a physical system with 4 cores, 8 GB of RAM, and a 20 GB HDD at a minimum
     - Don't use any of the "easy install" options when setting up a VM, we're going to make some config changes in the build process
     - I recommend removing all the things that get attached that you're not going to use (speakers, BlueTooth, USB, printer support, floppy, web camera, etc.)
@@ -96,24 +96,24 @@ sudo sh deploy_capes.sh
 
 ### Build Process
 The build is automated and the shell script will start the build of:
-* Install Docker
-* Install Docker containers for
-- Mumble
-- Rocketchat
-- Gita
-- TheHive
-- Cortex
-- Etherpad
-- Cyberchef
-- Nginx
-- Mysql
-- Mongodb
-- Elasticsearch (for TheHive)
-- Elasticsearch (for monitoring CAPES)
-- Kibana (for monitoring CAPES)
-- Heartbeat (for monitoring CAPES)
-* Setup the CAPES landing page
-* Make firewall changes
+- Install Docker
+- Install Docker containers for
+    - Mumble
+    - Rocketchat
+    - Gita
+    - TheHive
+    - Cortex
+    - Etherpad
+    - Cyberchef
+    - Nginx
+    - Mysql
+    - Mongodb
+    - Elasticsearch (for TheHive)
+    - Elasticsearch (for monitoring CAPES)
+    - Kibana (for monitoring CAPES)
+    - Heartbeat (for monitoring CAPES)
+- Setup the CAPES landing page
+- Make firewall changes
 
 ## Post Installation
 While the CAPES deploy script attempts to get you up and running, there are a few things that need to be done after installation.
